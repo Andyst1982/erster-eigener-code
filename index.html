@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>EinmalEins</title>
+    <script>
+        function begruessen() {
+            var name = prompt("Wie ist dein Name?");
+            
+            if (name) { // Überprüfen, ob der Benutzer einen Namen eingegeben hat
+                var rechnen = confirm("Hallo " + name + ", Wollen wir Rechnen?");
+                
+                if (rechnen) {
+                    alert("Super!" + name +" Lass uns rechnen.");
+                    window.location.href = "Rechenaufgaben.html"; // Weiterleitung zur Rechenaufgaben-Seite
+                } else {
+                  
+                    window.location.href = "https://www.wwf-junior.de/tiere/faultiere"; 
+                }
+            } else {
+                alert("Ohne Namen können wir nicht fortfahren.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="begruessen()">Start</button>
+</body>
+</html>
+

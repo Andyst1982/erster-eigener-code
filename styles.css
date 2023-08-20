@@ -1,0 +1,18 @@
+/* Allgemeine Stildefinitionen */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    height: 100vh; /* Die Höhe des Viewports in % nutzen */
+    background-color: #de1414; /* Hintergrundfarbe 
+
+.gif-container {
+    text-align: center; /* Um das Bild horizontal zu zentrieren */
+}
+
+img {
+    max-width: 100%; /* Das Bild auf die Container-Breite beschränken */
+    height: auto;
+}

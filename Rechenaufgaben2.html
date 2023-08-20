@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Einmaleins Übung</title>
+</head>
+<body>
+    <h1>Einmaleins Übung</h1>
+    
+    <script>
+        // Zufallszahlengenerator
+        function getRandomNumber() {
+            return Math.floor(Math.random() * 10) + 10; // Zufällige Zahl von 11 bis 20
+        }
+
+        // Aufgabe generieren und anzeigen
+        function generateQuestion() {
+            var num1 = getRandomNumber();
+            var num2 = getRandomNumber();
+            var correctAnswer = num1 * num2;
+
+            var userAnswer = prompt("Was ist " + num1 + " * " + num2 + "?");
+
+            if (userAnswer === null) {
+                // Benutzer hat auf "Abbrechen" geklickt
+                alert("Schade, du hast aufgegeben. Zurück zur Grundschule!");
+                window.location.href = "https://www.wwf-junior.de/tiere/faultiere";
+            } else if (parseInt(userAnswer) === correctAnswer) {
+                // Richtige Antwort
+                alert("Richtig! Gute Arbeit!");
+                window.location.href = "ende.html"; // Weiterleitung zur nächsten Seite
+            } else {
+                // Falsche Antwort
+                alert("Leider falsch. Du solltest vielleicht zurück zur Grundschule gehen!");
+            }
+        }
+
+        // Aufgabe generieren, wenn die Seite geladen wird
+        window.onload = generateQuestion;
+    </script>
+
+    <button onclick="generateQuestion()">Nächste Aufgabe</button>
+</body>
+</html>
+
+
